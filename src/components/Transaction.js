@@ -10,7 +10,7 @@ export const Transaction = ({ transaction }) => {
             <span>{sign}PKR{Math.abs(transaction.transactionAmount)}</span>
             <button className="delete-btn"
                     onClick={() => delTransaction(transaction.id)}>
-                DELETE HISTORY
+               
             </button>
         </li>
     )
