@@ -16,7 +16,10 @@ export const TransactionHistory = () => {
                     )
                 )}
             </ul>
-            <button onClick={() => this.props.onDelete(this.props.id)}>Delete</button>
+            <button className="delete-btn"
+                    onClick={() => delTransaction(transaction.id)}>
+                DELETE HISTORY
+            </button>
         </div>
     )
 }
