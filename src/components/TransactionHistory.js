@@ -3,7 +3,7 @@ import { Transaction } from './Transaction';
 import { GlobalContext } from '../context/GlobalState';
 export const TransactionHistory = () => {
     const { transactions } = useContext(GlobalContext);
-
+    const { delTransaction } = useContext(GlobalContext);
     return (
         <div>
             <h3>
@@ -17,7 +17,7 @@ export const TransactionHistory = () => {
                 )}
             </ul>
             <button className="delete-btn"
-                    onClick={() => delTransaction(transaction.id)}>
+                    onClick={() => delTransaction(transactions)}>
                 DELETE HISTORY
             </button>
         </div>
